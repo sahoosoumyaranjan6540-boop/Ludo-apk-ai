@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #FFF2A3 0%, #FFC857 50%, #B8860B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .border-gold-gradient {
+    border-image: linear-gradient(135deg, #FFF2A3, #FFC857, #B8860B) 1;
+  }
+  .bg-gold-gradient {
+    background: linear-gradient(135deg, #FFF2A3 0%, #FFC857 50%, #E6AC29 100%);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 8px rgba(255, 200, 87, 0.4)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 16px rgba(255, 200, 87, 0.9)); }
+}
+
+@keyframes hopStep {
+  0% { transform: translate(-50%, -50%) scale(1) translateY(0); }
+  50% { transform: translate(-50%, -50%) scale(1.35) translateY(-14px); }
+  100% { transform: translate(-50%, -50%) scale(1) translateY(0); }
+}
+
+@keyframes blastExplode {
+  0% { transform: scale(0.2); opacity: 1; }
+  60% { transform: scale(1.5); opacity: 0.9; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+@keyframes mascotBounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-8px) rotate(-3deg); }
+  75% { transform: translateY(-4px) rotate(3deg); }
+}
+
+@keyframes mascotCheer {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.15) rotate(-6deg) translateY(-10px); }
+  50% { transform: scale(1.15) rotate(6deg) translateY(-12px); }
+  75% { transform: scale(1.1) rotate(-3deg) translateY(-6px); }
+}
+
+@keyframes floatUpFade {
+  0% { transform: translateY(0) scale(0.6); opacity: 0; }
+  20% { transform: translateY(-20px) scale(1.2); opacity: 1; }
+  80% { transform: translateY(-80px) scale(1); opacity: 0.9; }
+  100% { transform: translateY(-130px) scale(0.8); opacity: 0; }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.animate-hop-step {
+  animation: hopStep 0.22s ease-out;
+}
+
+.animate-blast {
+  animation: blastExplode 0.6s cubic-bezier(0.1, 0.8, 0.2, 1) forwards;
+}
+
+.animate-mascot-bounce {
+  animation: mascotBounce 2.5s ease-in-out infinite;
+}
+
+.animate-mascot-cheer {
+  animation: mascotCheer 0.6s ease-in-out infinite;
+}
+
+.animate-float-up {
+  animation: floatUpFade 2.5s ease-out forwards;
+}
+
+/* Custom scrollbar for dark aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #101426;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A3358;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FFC857;
+}
+

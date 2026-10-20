@@ -1,0 +1,6 @@
+{
+  "name": "Ludo Royal",
+  "description": "Premium 3D-inspired royal Ludo board game for Android and Web with animated dice, smart AI, multiplayer rooms, and direct APK download.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
